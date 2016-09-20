@@ -1,0 +1,133 @@
+@import (reference) "definitions.less";
+
+.grid-container {
+
+    height: 240px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+
+    .ag-root {
+        border: 1px solid @tableBorder;
+    }
+
+    .ag-header {
+        border: none;
+    }
+
+    .ag-header-container {
+        background: @tableHeader;
+    }
+
+    .ag-header-cell {
+        background: @tableHeader;
+        color: @textLight;
+        text-align: left;
+        border: none !important;
+        font-family: @mainFont;
+        font-weight: @mainFontWeightBd;
+        font-size: @mainFontSize;
+        padding-left: 4px;
+        padding-right: 4px;
+        padding-top: 2px;
+    }
+
+    .ag-header-icon {
+        color: @dufrySnow;
+        fill: @dufrySnow;
+
+        &#agSortAsc svg {
+           transform: scale(0.8);
+           -webkit-transform: scale(0.8);
+           -ms-transform: scale(0.8);
+        }
+
+        &#agSortDesc svg {
+            transform: scale(0.8);
+            -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+        }
+    }
+
+    span#agText.ag-header-cell-text {
+        float: left;
+        margin-right: 4px;
+    }
+
+    .ag-header-cell-menu-button {
+
+        transition: none;
+        -webkit-transition: none;
+        margin-top: 2px;
+
+        &:hover{
+            cursor: pointer;
+        }
+    }
+
+    .ag-body {
+        background-color: @tableBackground;
+    }
+
+    .ag-row-odd {
+        background-color: @tableRowEvenBg;
+    }
+
+    .ag-row-selected {
+        background-color: @tableRowSelected;
+        border: 1px solid @primaryColor;
+    }
+
+    .ag-cell {
+        border: none !important;
+        padding-left: 4px;
+        font-family: @mainFont;
+        font-weight: @mainFontWeightBd;
+        font-size: @mainFontSize;
+    }
+
+    .ag-cell-focus {
+        border: none;
+        outline: none;
+    }
+
+    .ag-menu {
+
+        z-index: 9999;
+        border: 1px solid @darkGray;
+
+        #tabHeader {
+            background-color: @gray;
+
+            .ag-tab {
+                margin-left: 4px;
+                margin-top: 2px;
+            }
+
+            polygon {
+                fill: @darkGray;
+            }
+        }
+
+        #tabBody {
+            background-color: @gray;
+            padding-left: 4px;
+
+            input[type="checkbox"] {
+                margin-left: 2px;
+                margin-right: 4px;
+            }
+
+            input[type="text"] {
+                outline: none;
+            }
+
+            .ag-filter-value {
+                font-family: @mainFont;
+                font-weight: @mainFontWeightBd;
+                font-size: @mainFontSize;
+            }
+        }
+
+    }
+}
